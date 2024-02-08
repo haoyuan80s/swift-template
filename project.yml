@@ -1,0 +1,24 @@
+name: SwiftDataExample
+options:
+  bundleIdPrefix: com.ribbit2
+settings:
+
+targets:
+  SwiftDataExample:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources: 
+      - path: SwiftDataExample
+        includes: "**"
+    settings:
+      base:
+        DEVELOPMENT_TEAM: 46RU75X585
+        INFOPLIST_FILE: Info.plist
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
+      configs:
+        debug:
+          CUSTOM_BUILD_SETTING: my_debug_value
+        release:
+          CUSTOM_BUILD_SETTING: my_release_value
