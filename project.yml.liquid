@@ -1,15 +1,15 @@
-name: SwiftDataExample
+name: {{project-name | upper_camel_case}}
 options:
   bundleIdPrefix: com.ribbit2
 settings:
 
 targets:
-  SwiftDataExample:
+  {{project-name | upper_camel_case}}:
     type: application
     platform: iOS
     deploymentTarget: "17.0"
     sources: 
-      - path: SwiftDataExample
+      - path: {{project-name | upper_camel_case}}
         includes: "**"
     settings:
       base:
