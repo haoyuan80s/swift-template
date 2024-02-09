@@ -11,7 +11,13 @@ lsp-build:
     xcode-build-server config -project {{project-name | upper_camel_case}}.xcodeproj/ -scheme {{project-name | upper_camel_case}} >> just.log
 
 build:
-    xcodebuild -project {{project-name | upper_camel_case}}.xcodeproj -target {{project-name | upper_camel_case}} >> just.log
+    rm -r .bundle*; \
+    xcodebuild  \
+      -project {{project-name | upper_camel_case}}.xcodeproj \
+      -scheme {{project-name | upper_camel_case}} \
+      -destination 'generic/platform=iOS Simulator' \
+      -resultBundlePath .bundle build \
+      >> just.log
 
 clean:
     rm -rf {{project-name | upper_camel_case}}.xcodeproj
